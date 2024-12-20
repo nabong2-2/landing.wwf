@@ -26,8 +26,10 @@ line-height:1.7;
 ## =====================mobile
 ## 대제목 30 (m)
 font-size:1.88rem; font-weight:700; line-height:1.3; letter-spacing:-0.02em;
-## 부제목 25 (m)
-font-size:1.56rem; font-weight:500; line-height:1.2;
+## 부제목 22 (m)
+font-size:1.38rem; font-weight:500; line-height:1.2;
+## 내용강조 15 (m)
+font-size:0.94rem;
 ## 내용 13 (m)
 font-size:0.81rem; line-height:1.7; letter-spacing:-0.02em;
 

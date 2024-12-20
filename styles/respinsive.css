@@ -55,8 +55,22 @@
         }
     }
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★4행(tablet) */
-    /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★5행(tablet) */
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★6행(tablet) */
+@media screen and (max-width:1250px) {
+    #wrap .bg4, 
+    #wrap .bg6 {
+        padding: 200px 0;    
+    }
+    #wrap .bg4 .contents h2, 
+    #wrap .bg6 .contents h2 {
+        font-size:2.50rem;
+    }
+    #wrap .bg4 .contents h2+p, 
+    #wrap .bg6 .contents h2+p {
+        font-size:1.38rem;
+}  
+}
+    /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★5행(tablet) */
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★7행(tablet) */
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★8행(tablet) */
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★9행(tablet) */
@@ -133,8 +147,24 @@
         }
     }
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★4행(mobile) */
-    /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★5행(mobile) */
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★6행(mobile) */
+    @media screen and (max-width:768px) {
+        #wrap .bg4, 
+        #wrap .bg6 {
+            padding: 50px 0;    
+        }
+        #wrap .bg4 .contents h2, 
+        #wrap .bg6 .contents h2 {
+            font-size:1.38rem; 
+        }
+        #wrap .bg4 .contents h2+p, 
+        #wrap .bg6 .contents h2+p {
+            font-size:0.94rem;
+            margin: 20px 0;
+            align-self: center; text-align: center;
+    }  
+}
+    /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★5행(mobile) */
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★7행(mobile) */
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★8행(mobile) */
     /* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★9행(mobile) */
