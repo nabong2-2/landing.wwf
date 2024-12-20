@@ -1,0 +1,160 @@
+/* ★전체 공통 디자인 */
+#wrap {}
+#wrap .container {
+    background-position: center;
+    background-size: cover;
+}
+#wrap .container .contents {
+    max-width: 1250px; min-width: 320px; margin: 0 auto;
+}
+#wrap .container .main_title { /* 대제목 70 */
+    font-size: 4.38rem; letter-spacing: -0.02rem;
+    line-height: 1.3; color: #fff; text-align: center;
+}
+#wrap .container .main_title span {font-weight: 700;}
+#wrap .container .sponser_btn {
+    font-size: 2.13rem; line-height: 1.2; font-weight: 700; color: #fff;  
+    background: linear-gradient(90deg, #fe9300, #ff7300);
+    border-radius: 50px; padding: 15px 70px;
+}
+#wrap .container .sponser_btn:hover {
+    background: linear-gradient(-90deg, #fe9300, #ff7300)
+}
+#wrap .container .sponser_btn img {width: 32px;  position: relative; top: 3.5px;}
+#wrap .container .sponser_q_btn {
+    font-size: 2.25rem; line-height: 1.2; color: #fff;
+    background-color: #050505; border-radius: 50px; padding: 10px 64px; display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+#wrap .container .sponser_q_btn:hover {
+    background-color: transparent;
+}
+#wrap .container .sponser_q_btn img {width: 24px;}
+#wrap .container .sponser_q_btn img:first-child {margin-right: 10px;}
+#wrap .container .sponser_q_btn img:last-child {margin-left: 10px;}
+/* 공통 글자 */
+#wrap .container .contents h2{
+    color: #fff;
+    font-size: 3.44rem; font-weight: 500; letter-spacing: -0.01rem; line-height: 1.2;
+}
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★1행 제목+후원 */
+#wrap .bg1 {
+    background-image: url('../images/bg1.png');
+    background-attachment: fixed;
+}
+#wrap .bg1 .gradient {
+    background: linear-gradient(transparent, rgba(0,0,0,0.6) 69%); /* 위에서부터 아래 */ 
+    /* 시계 반대 방향으로 deg */
+    /* 각도, 색상, 색상(콤마없음) 색상위치%, 색상(개수제한x) */
+}
+#wrap .bg1 .gradient .contents {
+    height: 150vh; /* 자식한테 주면 부모는 따라옴 */
+    /* 높이주는건 이런 예외적인 상황만(레이아웃) */
+    display: flex; flex-flow: column nowrap;
+    justify-content: center; align-items: center;
+}
+#wrap .bg1 .gradient .contents > * {
+    margin-bottom: 100px;
+}
+#wrap .bg1 .gradient .contents h1:nth-child(1) {
+    width: 89px; 
+    align-self: flex-start;
+}
+/* h1는 블록이라 너비 안따라옴(세로길이!!!!) */
+#wrap .bg1 .gradient .contents h1:nth-child(1) a {}
+/* 가장 멀리 묶고 있는 부모쪽에/ a는 인라인(너비 따라옴) */
+#wrap .bg1 .gradient .contents h1:nth-child(1) a img {width: 100%;}
+/* 이미지는 보통 인라인이기도 하고 본인 크기를 가짐 */
+#wrap .bg1 .gradient .contents h1:nth-child(2) {}
+#wrap .bg1 .gradient .contents h1:nth-child(2) span {}
+/* 버튼 */
+#wrap .bg1 .gradient .contents .sponser_btn {}
+#wrap .bg1 .gradient .contents .sponser_btn img {margin-left: 10px;}
+#wrap .bg1 .gradient .contents .sponser_q_btn {align-self: flex-end; margin: 0; }
+#wrap .bg1 .gradient .contents .sponser_q_btn img:first-child {}
+#wrap .bg1 .gradient .contents .sponser_q_btn img:last-child {}
+/* -------------------------------------2행 제목+후원 */
+/* 2행 공통 */
+#wrap .bg2 .contents .quiz_contents p, 
+#wrap .bg2 .contents .quiz_contents form label input[name^=quiz]+span,
+#wrap .bg2 .contents .quiz_contents form .answer_btn,
+#wrap .bg2 .contents .quiz_status span {
+    font-size: 1.25rem; line-height: 1.7; color: #fff;
+}
+/* 2행 개별 */
+#wrap .bg2 {
+    background-image: url(../images/quiz_bg.png);
+    padding: 150px 0; /* contents에 써도 됌 */
+}
+#wrap .bg2 .contents {
+    display: flex; flex-flow: row nowrap; justify-content: space-between; 
+    align-items: center;
+}
+#wrap .bg2 .contents .quiz_contents {}
+#wrap .bg2 .contents .quiz_contents h2 {
+    color: #fff;
+    margin-bottom: 38px; text-align: center;
+}
+#wrap .bg2 .contents .quiz_contents p {
+    margin-bottom: 13px; 
+}
+#wrap .bg2 .contents .quiz_contents form {
+    display: flex; flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+#wrap .bg2 .contents .quiz_contents form label {margin-bottom: 20px;}
+/* 높이를 주는 경우도 있네.. 그리고 span에 height에 100%주기*/
+#wrap .bg2 .contents .quiz_contents form label:last-child {margin-bottom: 38px;}
+#wrap .bg2 .contents .quiz_contents form label input[name^=quiz] {}
+#wrap .bg2 .contents .quiz_contents form label input[name^=quiz]+span {
+    background-image: url(../images/quiz_no.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 48px;
+}
+#wrap .bg2 .contents .quiz_contents form label input[name^=quiz]:checked+span {
+    background-image: url(../images/quiz_check.png);
+    /* 리핏/포지션 등은 기본 span에 적용하기 */
+}
+#wrap .bg2 .contents .quiz_contents form .answer_btn {
+    width: 451px; 
+    border-radius: 50px; background-color: #050505;
+    padding: 10px 0;
+}
+#wrap .bg2 .contents .quiz_contents form .answer_btn:hover {background-color: grey}
+#wrap .bg2 .contents .quiz_status {
+    display: flex; flex-flow: column nowrap; align-items: flex-end;  
+}
+#wrap .bg2 .contents .quiz_status img {width: 500px}
+#wrap .bg2 .contents .quiz_status span {
+    /* display: block; */
+    margin-top: 20px;
+}
+/* -------------------------------------3행 동영상 */
+#wrap .bg3 {
+    background-image: url(../images/video_bg.png);
+    padding: 200px 0;
+}
+#wrap .bg3 .contents {
+    display: flex; flex-flow: column nowrap;
+    justify-content: space-between; align-items: center;
+}
+#wrap .bg3 .contents > * {margin-bottom: 70px;}
+#wrap .bg3 .contents h2 {
+    color: #000;
+    text-align: center;
+}
+#wrap .bg3 .contents iframe {max-width: 900px; width: 100%;}
+#wrap .bg3 .contents .sponser_btn {
+    margin: 0;
+    font-size:2.13rem; line-height:1.2; font-weight:700; 
+}
+#wrap .bg3 .contents .sponser_btn .img {width: 100%;}
+/* -------------------------------------4행 빙하 50% 감소 */
+/* -------------------------------------5행 빙하 인류재앙3 */
+/* -------------------------------------6행 지구전체위기 */
+/* -------------------------------------7행 WWF소개 */
+/* -------------------------------------8행 다양한 활동 */
+/* -------------------------------------9행 감사선물 */
+/* -------------------------------------10행 안내사항 */
